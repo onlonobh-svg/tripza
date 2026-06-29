@@ -1,0 +1,6 @@
+{
+  "name": "Tripza AI",
+  "description": "An all-in-one smart travel hub containing AI Trip Generators, interactive budget calculators, pre-made premium travel guides, checklists, and a digital product shop.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
