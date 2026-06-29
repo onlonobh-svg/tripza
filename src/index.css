@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Tajawal", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f4ecce;
+  --color-gold-200: #e8d79c;
+  --color-gold-300: #dbbf65;
+  --color-gold-400: #d0aa3e;
+  --color-gold-500: #b9922c;
+  --color-gold-600: #9a7321;
+  --color-gold-700: #7b561c;
+  --color-gold-800: #624419;
+  --color-gold-900: #513817;
+  
+  --color-navy-50: #f4f6fa;
+  --color-navy-100: #e6eaf3;
+  --color-navy-200: #ccd8e7;
+  --color-navy-300: #a3bad3;
+  --color-navy-400: #7396bc;
+  --color-navy-500: #5279a5;
+  --color-navy-600: #3f5f87;
+  --color-navy-700: #334d6d;
+  --color-navy-800: #2c415c;
+  --color-navy-900: #1b2637;
+  --color-navy-950: #0f1520;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0c111a;
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+/* Elegant custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1520;
+}
+::-webkit-scrollbar-thumb {
+  background: #1b2637;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b9922c;
+}
+
+/* ==========================================
+   LIGHT MODE DESIGN SYSTEM OVERRIDES
+   ========================================== */
+
+/* Scope everything inside .light-mode root */
+.light-mode {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+/* Force body background in light mode */
+body:has(.light-mode) {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+/* App container */
+.light-mode#app-container,
+.light-mode #app-container {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+/* Background overrides for main section & header */
+.light-mode .bg-\[\#0A0B0E\],
+.light-mode .bg-\[\#0A0B0E\]\/95 {
+  background-color: #f8fafc !important;
+}
+
+/* Sticky Header styling */
+.light-mode #header-section {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Navigation tabs in header */
+.light-mode nav button:not(.bg-amber-500) {
+  color: #475569 !important;
+}
+.light-mode nav button:not(.bg-amber-500):hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Card overrides for all bento blocks & grids */
+.light-mode .bg-\[\#0F1116\],
+.light-mode .bg-\[\#0F1116\]\/60,
+.light-mode .bg-\[\#0F1116\]\/95 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Text elements & headings */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6,
+.light-mode .text-white {
+  color: #0f172a !important;
+}
+
+.light-mode .text-slate-100,
+.light-mode .text-slate-200,
+.light-mode .text-slate-300 {
+  color: #334155 !important;
+}
+
+.light-mode .text-slate-400 {
+  color: #475569 !important;
+}
+
+.light-mode .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Borders adjustment */
+.light-mode .border-white\/5,
+.light-mode .border-white\/10 {
+  border-color: #e2e8f0 !important;
+}
+
+/* White-translucents to soft slates */
+.light-mode .bg-white\/5 {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light-mode .bg-white\/10 {
+  background-color: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Form inputs & interactive boxes */
+.light-mode input,
+.light-mode select,
+.light-mode textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.light-mode input::placeholder,
+.light-mode textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.light-mode .bg-black\/40 {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.light-mode .text-amber-500 {
+  color: #b45309 !important; /* Premium dark amber readably */
+}
+
+/* Hover scales and special highlights */
+.light-mode .hover\:border-amber-500\/50:hover {
+  border-color: #d97706 !important;
+}
+
+.light-mode .bg-amber-500\/5 {
+  background-color: rgba(217, 119, 6, 0.05) !important;
+}
+
+.light-mode .border-amber-500\/10 {
+  border-color: rgba(217, 119, 6, 0.15) !important;
+}
+
+/* Modal backgrounds */
+.light-mode .fixed.inset-0 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.light-mode .fixed.inset-0 .bg-\[\#0F1116\] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.light-mode .fixed.inset-0 label {
+  color: #475569 !important;
+}
+
+/* Mobile Tabs Overrides */
+.light-mode #mobile-tabs-container {
+  background-color: #f8fafc !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.light-mode #mobile-tabs-container button:not(.bg-amber-500) {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+}
+
+/* Travel plan custom response box fixes */
+.light-mode .prose {
+  color: #1e293b !important;
+}
+
+.light-mode .divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #e2e8f0 !important;
+}
+
+.light-mode .divide-white\/10 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #cbd5e1 !important;
+}
+
+.light-mode .text-emerald-400 {
+  color: #047857 !important;
+}
+
+.light-mode .bg-emerald-500\/10 {
+  background-color: rgba(4, 120, 87, 0.1) !important;
+}
+
+.light-mode .border-emerald-500\/20 {
+  border-color: rgba(4, 120, 87, 0.2) !important;
+}
+
